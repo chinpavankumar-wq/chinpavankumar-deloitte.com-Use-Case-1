@@ -1,0 +1,78 @@
+{
+  "run_id": "8b0fb851-bc46-49f6-863f-ed09f5502ebd",
+  "tables": {
+    "products": {
+      "row_count": 20,
+      "columns": {
+        "product_id": {
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 20,
+          "sample_values": [
+            "P001",
+            "P002",
+            "P003",
+            "P004",
+            "P005"
+          ],
+          "quality_flags": [
+            "possible_abbreviations"
+          ]
+        },
+        "product_name": {
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 20,
+          "sample_values": [
+            "iPhone 15",
+            "Samsung Galaxy S24",
+            "AirPods Pro",
+            "Sony WH-1000XM5",
+            "Levi's 501 Jeans"
+          ],
+          "quality_flags": []
+        },
+        "category": {
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 5,
+          "sample_values": [
+            "Electronics",
+            "Apparel",
+            "Home & Kitchen",
+            "Sports",
+            "Beauty"
+          ],
+          "quality_flags": []
+        },
+        "standard_price": {
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 19,
+          "sample_values": [
+            "999.99",
+            "849.99",
+            "249.99",
+            "349.99",
+            "69.99"
+          ],
+          "min": 12.99,
+          "max": 999.99,
+          "mean": 259.2405,
+          "quality_flags": []
+        }
+      }
+    }
+  },
+  "candidate_join_keys": {},
+  "llm_analysis": {
+    "quality_summary": "Rule-based only (LLM unavailable)",
+    "critical_issues": [],
+    "transformation_recommendations": {},
+    "join_key_reasoning": "LLM call failed: GROQ_API_KEY is not set. Add it to your .env file."
+  }
+}

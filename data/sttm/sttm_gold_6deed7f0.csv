@@ -1,0 +1,4 @@
+source_schema,source_table,source_column,target_schema,target_table,target_column,transformation_type,transformation_logic
+silver,products,category,gold,category_price_stats,category,group_by,category
+silver,products,standard_price,gold,category_price_stats,avg_standard_price,aggregate,AVG(standard_price) AS avg_standard_price
+gold,category_price_stats,,gold,top_category_by_price,category,rank_limit,ORDER BY avg_standard_price DESC LIMIT 1

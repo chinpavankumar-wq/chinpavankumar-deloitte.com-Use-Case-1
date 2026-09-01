@@ -1,0 +1,27 @@
+source_schema,source_table,source_column,target_schema,target_table,target_column,transformation_type,transformation_logic
+raw,products,product_id,analytics,dim_products,product_id,type_cast,CAST TO STRING
+raw,products,product_name,analytics,dim_products,product_name,type_cast,CAST TO STRING
+raw,products,category,analytics,dim_products,category,type_cast,CAST TO STRING
+raw,products,standard_price,analytics,dim_products,standard_price,type_cast,CAST TO FLOAT
+raw,products,,analytics,dim_products,_load_timestamp,metadata_inject,utc_now()
+raw,products,,analytics,dim_products,_source_file,metadata_inject,source_path()
+raw,sales_data,transaction_id,analytics,fact_sales,transaction_id,type_cast,CAST TO STRING
+raw,sales_data,transaction_date,analytics,fact_sales,transaction_date,type_cast,CAST TO DATE
+raw,sales_data,store_id,analytics,fact_sales,store_id,type_cast,CAST TO STRING
+raw,sales_data,product_id,analytics,fact_sales,product_id,type_cast,CAST TO STRING
+raw,sales_data,product_name,analytics,fact_sales,product_name,type_cast,CAST TO STRING
+raw,sales_data,category,analytics,fact_sales,category,type_cast,CAST TO STRING
+raw,sales_data,quantity,analytics,fact_sales,quantity,type_cast,CAST TO INTEGER
+raw,sales_data,unit_price,analytics,fact_sales,unit_price,type_cast,CAST TO FLOAT
+raw,sales_data,total_amount,analytics,fact_sales,total_amount,type_cast,CAST TO FLOAT
+raw,sales_data,customer_segment,analytics,fact_sales,customer_segment,type_cast,CAST TO STRING
+raw,sales_data,payment_method,analytics,fact_sales,payment_method,type_cast,CAST TO STRING
+raw,sales_data,,analytics,fact_sales,_load_timestamp,metadata_inject,utc_now()
+raw,sales_data,,analytics,fact_sales,_source_file,metadata_inject,source_path()
+raw,stores,store_id,analytics,dim_stores,store_id,type_cast,CAST TO STRING
+raw,stores,store_name,analytics,dim_stores,store_name,type_cast,CAST TO STRING
+raw,stores,region,analytics,dim_stores,region,type_cast,CAST TO STRING
+raw,stores,city,analytics,dim_stores,city,type_cast,CAST TO STRING
+raw,stores,state,analytics,dim_stores,state,type_cast,CAST TO STRING
+raw,stores,,analytics,dim_stores,_load_timestamp,metadata_inject,utc_now()
+raw,stores,,analytics,dim_stores,_source_file,metadata_inject,source_path()
